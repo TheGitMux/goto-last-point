@@ -11,7 +11,7 @@ This is only a polished version for MELPA.
 ## Setup
 
 `goto-last-point` is not available on MELPA yet. You can easily install and
-configure it with [use-package](https://github.com/jwiegley/use-package)
+configure it with [use-package](https://github.com/jwiegley/use-package):
 
 ``` emacs-lisp
 (use-package goto-last-point
