@@ -16,6 +16,6 @@ configure it with [use-package](https://github.com/jwiegley/use-package):
 ``` emacs-lisp
 (use-package goto-last-point
   :load-path "path/to/goto-last-point"
-  :bind ("C-x C-x" . goto-last-point)
+  :bind ("C-x \\" . goto-last-point)
   :config (goto-last-point-mode))
 ```
