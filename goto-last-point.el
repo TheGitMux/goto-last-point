@@ -72,13 +72,13 @@
 
 (defun goto-last-point--add-hooks ()
   "Add hooks for recording point."
-  (add-hook 'post-command-hook 'goto-last-point-record)
-  (add-hook 'after-change-functions 'goto-last-point-clear))
+  (add-hook 'post-command-hook 'goto-last-point--record)
+  (add-hook 'after-change-functions 'goto-last-point--clear))
 
 (defun goto-last-point--remove-hooks ()
   "Remove hooks for recording point."
-  (remove-hook 'post-command-hook 'goto-last-point-record)
-  (remove-hook 'after-change-functions 'goto-last-point-clear))
+  (remove-hook 'post-command-hook 'goto-last-point--record)
+  (remove-hook 'after-change-functions 'goto-last-point--clear))
 
 (defun goto-last-point--clear (_ _1 _2)
   "Clear the last point after a change occur."
