@@ -70,22 +70,22 @@
         (when point (goto-char point))
         (run-hooks 'goto-last-point-goto-hook)))))
 
-(defun goto-last-point-add-hooks ()
+(defun goto-last-point--add-hooks ()
   "Add hooks for recording point."
   (add-hook 'post-command-hook 'goto-last-point-record)
   (add-hook 'after-change-functions 'goto-last-point-clear))
 
-(defun goto-last-point-remove-hooks ()
+(defun goto-last-point--remove-hooks ()
   "Remove hooks for recording point."
   (remove-hook 'post-command-hook 'goto-last-point-record)
   (remove-hook 'after-change-functions 'goto-last-point-clear))
 
-(defun goto-last-point-clear (_ _1 _2)
+(defun goto-last-point--clear (_ _1 _2)
   "Clear the last point after a change occur."
   (setq goto-last-point-stack nil)
   (setq goto-last-point-next nil))
 
-(defun goto-last-point-record ()
+(defun goto-last-point--record ()
   "Record the current point in the current buffer."
   (unless (or (minibufferp)
               (eq this-command 'self-insert-command))
