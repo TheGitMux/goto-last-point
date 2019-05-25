@@ -1,6 +1,7 @@
 # goto-last-point
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![MELPA](https://melpa.org/packages/goto-last-point-badge.svg)](https://melpa.org/#/goto-last-point)
 
 A minor-mode to record and jump to the last point in the buffer.
 
@@ -10,12 +11,12 @@ This is only a polished version for MELPA.
 
 ## Setup
 
-`goto-last-point` is not available on MELPA yet. You can easily install and
-configure it with [use-package](https://github.com/jwiegley/use-package):
+`goto-last-point` is available on MELPA. You can easily install and configure it
+with [use-package](https://github.com/jwiegley/use-package):
 
 ``` emacs-lisp
 (use-package goto-last-point
-  :load-path "path/to/goto-last-point"
+  :ensure t
   :bind ("C-<" . goto-last-point)
   :config (goto-last-point-mode))
 ```
