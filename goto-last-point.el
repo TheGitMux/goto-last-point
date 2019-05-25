@@ -32,9 +32,7 @@
 
 ;;; Code:
 
-(declare-function ring-empty-p "ext:ring-empty-p")
-(declare-function ring-remove "ext:ring-remove")
-(declare-function ring-insert "ext:ring-insert")
+(require 'ring)
 
 (defcustom goto-last-point-max-length
   5
