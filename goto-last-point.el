@@ -57,7 +57,8 @@
   :global t
   (if goto-last-point-mode
       (goto-last-point--add-hooks)
-    (goto-last-point--remove-hooks)))
+    (goto-last-point--remove-hooks)
+    (kill-local-variable 'goto-last-point-stack)))
 
 (defun goto-last-point ()
   "Jump to the last point."
