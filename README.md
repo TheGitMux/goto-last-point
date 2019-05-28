@@ -19,7 +19,5 @@ with [use-package](https://github.com/jwiegley/use-package):
   :ensure t
   :demand t
   :bind ("C-<" . goto-last-point)
-  :config (progn
-            (setq goto-last-point-max-length 10)
-            (goto-last-point-mode)))
+  :config (goto-last-point-mode))
 ```
