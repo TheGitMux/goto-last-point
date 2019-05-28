@@ -17,8 +17,9 @@ with [use-package](https://github.com/jwiegley/use-package):
 ``` emacs-lisp
 (use-package goto-last-point
   :ensure t
+  :demand t
+  :bind ("C-<" . goto-last-point)
   :config (progn
             (setq goto-last-point-max-length 10)
-            (bind-key "C-<" #'goto-last-point)
             (goto-last-point-mode)))
 ```
