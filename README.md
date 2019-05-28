@@ -19,6 +19,6 @@ with [use-package](https://github.com/jwiegley/use-package):
   :ensure t
   :config (progn
             (setq goto-last-point-max-length 10)
-            (bind-key "C-ù" #'goto-last-point)
+            (bind-key "C-<" #'goto-last-point)
             (goto-last-point-mode)))
 ```
