@@ -10,6 +10,10 @@ Chris Done created the original
 https://github.com/chrisdone/emacs-config/blob/master/packages/goto-last-point/goto-last-point.el[goto-last-point].
 This is only a polished version for MELPA.
 
+== Note
+
+This package is currently _UNMAINTAINED_. Feel free to reach out if you want to step in as the new maintainer.
+
 == Setup
 
 `goto-last-point` is available on MELPA. You can easily install and configure it
