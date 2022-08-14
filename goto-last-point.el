@@ -51,7 +51,7 @@
 
 (define-minor-mode goto-last-point-mode
   "Record and jump to the last point in the buffer."
-  nil
+  :group 'goto-last-point
   :lighter " GLP"
   :require 'goto-last-point
   :global t
