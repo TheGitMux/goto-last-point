@@ -1,4 +1,4 @@
-;;; goto-last-point.el --- Record and jump to the last point in the buffer. -*- lexical-binding: t -*-
+;;; goto-last-point.el --- Record and jump to the last point in the buffer -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2019  Manuel Uberti
 
