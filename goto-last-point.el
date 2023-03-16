@@ -35,7 +35,7 @@
 (require 'ring)
 
 (defcustom goto-last-point-max-length
-  5
+  10
   "Maximum length of the undo stack."
   :group 'goto-last-point
   :type 'integer)
