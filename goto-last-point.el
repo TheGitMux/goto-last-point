@@ -40,6 +40,12 @@
   :group 'goto-last-point
   :type 'integer)
 
+(defcustom goto-last-point-ignored-commands
+  '(next-line previous-line backward-char forward-char)
+  "Alist of ignored commands for `goto-last-point'."
+  :group 'goto-last-point
+  :type 'alist)
+
 (defvar-local goto-last-point-next nil
   "Next point to be added to the stack.")
 
@@ -94,7 +100,8 @@
       (set (make-local-variable 'goto-last-point-stack)
            (make-ring goto-last-point-max-length))
       (make-local-variable 'goto-last-point-next))
-    (when (and goto-last-point-next
+    (when (and (and goto-last-point-next
+		    (not (memq this-command goto-last-point-ignored-command)))
                (/= goto-last-point-next
                    (point)))
       (ring-insert goto-last-point-stack
