@@ -102,8 +102,8 @@
       (make-local-variable 'goto-last-point-next))
     (when (and (and goto-last-point-next
 		    (not (memq this-command goto-last-point-ignored-commands)))
-               (/= goto-last-point-next
-                   (point)))
+               (and (/= goto-last-point-next (point))
+		    (not (ring-member goto-last-point-stack goto-last-point-next))))
       (ring-insert goto-last-point-stack
                    goto-last-point-next))
     (setq goto-last-point-next (point))))
